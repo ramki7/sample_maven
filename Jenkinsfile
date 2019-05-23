@@ -9,13 +9,13 @@ pipeline {
         
         stage ('compile'){
             steps {
-                def MVNHOME =  tool name: 'mymaven', type: 'maven'
+                MVNHOME =  tool name: 'mymaven', type: 'maven'
                 sh "${MVNHOME}/bin/mvn compile test"
             }
         }
         stage ('build'){
             steps {
-                def MVNHOME =  tool name: 'mymaven', type: 'maven'
+                MVNHOME =  tool name: 'mymaven', type: 'maven'
                 sh "${MVNHOME}/bin/mvn package"
             }
     }
