@@ -17,7 +17,5 @@ pipeline {
             sh "${MVNHOME}/bin/mvn package"
             }
     }
-   
-
-    
+    }
 }
